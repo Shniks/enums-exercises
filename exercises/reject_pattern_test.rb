@@ -17,7 +17,7 @@ class RejectPatternTest < Minitest::Test
     letters = ["a", "l", "l", " ", "y", "o", "u", "r", " ", "b", "a", "s", "e", " ", "a", "r", "e", " ", "b", "e", "l", "o", "n", "g", " ", "t", "o", " ", "u", "s"]
     remaining = []
     letters.each do |letter|
-      # Your code goes here
+      remaining << letter unless letter.include? ("a","e","i","o","u")
     end
     assert_equal ["l", "l", " ", "r", " ", "b", "s", " ", "r", " ", "b", "l", "n", "g", " ", "t", " ", "s"], remaining
   end
